@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="min-h-screen px-2 sm:px-4 py-2.5">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

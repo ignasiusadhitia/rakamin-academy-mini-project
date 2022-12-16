@@ -1,12 +1,10 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import Loader from "../components/Loader";
 import ProductCard from "../components/ProductCard";
 
 const Product = () => {
   return (
-    <div className="container-sm m-4">
-      <Outlet />
+    <div className="container mx-auto p-4 max-w-md flex items-center">
+      <ProductCard />
     </div>
   );
 };
