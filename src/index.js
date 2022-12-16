@@ -20,13 +20,11 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="product">
-        <Route
-          path=":productId"
-          element={<ProductCard />}
-          errorElement={<NotFound />}
-        />
-      </Route>
+      <Route
+        path="product/:productId"
+        element={<ProductCard />}
+        errorElement={<NotFound />}
+      ></Route>
     </Route>
   )
 );
