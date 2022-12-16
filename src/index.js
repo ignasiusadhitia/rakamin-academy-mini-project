@@ -25,6 +25,7 @@ const router = createBrowserRouter(
         element={<ProductCard />}
         errorElement={<NotFound />}
       ></Route>
+      <Route />
     </Route>
   )
 );
