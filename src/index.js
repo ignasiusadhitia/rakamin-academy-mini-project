@@ -17,15 +17,12 @@ import Contact from "./pages/Contact";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<NotFound />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="product">
-        <Route
-          path=":productId"
-          element={<ProductCard />}
-          errorElement={<NotFound />}
-        />
+      <Route errorElement={<NotFound />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="product/:productId" element={<ProductCard />} />
+        <Route />
       </Route>
     </Route>
   )
