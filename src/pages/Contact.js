@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import profilePicture from "../assets/images/profile-pic.png";
+import Loader from "../components/Loader";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  let content = null;
+
+  if (loading) {
+    content = <Loader />;
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "ShopApp | Contact";
   }, []);
 
   return (
     <div className="container mx-auto p-4 max-w-md flex items-center">
-      <div className="w-full max-w-sm mt-10 dark:bg-gray-800">
+      <div className="w-full mt-10 dark:bg-gray-800">
         <div className="flex flex-col items-center text-center p-10">
           <img
             className="w-24 h-24 mb-3 rounded-full shadow-lg"
