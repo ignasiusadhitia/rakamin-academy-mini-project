@@ -13,7 +13,7 @@ const ProductCard = ({ product, substringed, back }) => {
         }}
       ></div>
       <div>
-        <div className="flex flex-col">
+        <div className="grid grid-rows-2">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {substringed ? title.substring(0, 20) + "..." : title}
           </h5>
