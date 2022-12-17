@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Home from "./pages/Home";
-import ProductCard from "./components/ProductCard";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import NotFound from "../components/NotFound";
 import ProductCard from "../components/ProductCard";
@@ -28,10 +28,11 @@ const Product = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "ShopApp | Product";
   }, []);
 
   return (
-    <div className="container mx-auto p-4 max-w-md flex items-center">
+    <div className="container mx-auto mt-10 mb-28 p-4 max-w-md flex items-center">
       {content}
     </div>
   );

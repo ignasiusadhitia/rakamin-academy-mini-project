@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link to="/" className="flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            MyApp
+            ShopApp
           </span>
         </Link>
         <MobileToggleButton showMobileMenu={showMobileMenuHandler} />

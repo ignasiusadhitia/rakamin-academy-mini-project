@@ -42,7 +42,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-28">
       {!products.error && (
         <h1 className="mb-6 text-4xl font-bold text-gray-900 dark:text-white">
           Best Sellers
@@ -50,17 +50,6 @@ const Home = () => {
       )}
 
       {content}
-
-      {!products.error && (
-        <div className="w-full p-8 flex justify-center gap-4">
-          <button className="w-3/12 md:w-1/12 text-center items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-            Prev
-          </button>
-          <button className="w-3/12 md:w-1/12 text-center items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-            Next
-          </button>
-        </div>
-      )}
     </div>
   );
 };

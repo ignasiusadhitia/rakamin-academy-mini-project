@@ -4,13 +4,13 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen relative">
       <Header />
-      <div className="min-h-screen px-2 sm:px-4 py-2.5">
+      <div className="px-2 sm:px-4 py-2.5">
         <Outlet />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
