@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import background from "../assets/images/background.jpeg";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = 'ShopApp | About';
+  }, []);
   return (
     <div className="container mx-auto">
       <div className="w-full mx-auto mt-5 p-4 text-center bg-white sm:p-8 dark:bg-gray-800">
