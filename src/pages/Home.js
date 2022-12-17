@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Loader from "../components/Loader";
 import NotFound from "../components/NotFound";
 import ProductCard from "../components/ProductCard";
@@ -8,11 +8,10 @@ const Home = () => {
   const url = "https://fakestoreapi.com/products";
 
   let products = useAxiosGet(url);
-  console.log(products);
 
   const dummyProducts = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  let content;
+  let content = null;
 
   if (products.loading) {
     content = (
@@ -28,7 +27,7 @@ const Home = () => {
     content = (
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {products.data.map((product) => (
-          <ProductCard product={product} key={product.id} />
+          <ProductCard product={product} substringed key={product.id} />
         ))}
       </div>
     );
@@ -37,6 +36,10 @@ const Home = () => {
   if (products.error) {
     content = <NotFound />;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto">
