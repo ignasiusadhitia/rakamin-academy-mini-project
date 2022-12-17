@@ -12,8 +12,10 @@ const ProductCard = ({ product, substringed, back }) => {
           backgroundImage: `url(${image})`,
         }}
       ></div>
-      <div>
-        <div className="grid grid-rows-2">
+      <div className="flex flex-col">
+        <div
+          className={substringed ? `h-24 grid grid-rows-2` : `grid grid-rows-2`}
+        >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {substringed ? title.substring(0, 20) + "..." : title}
           </h5>
@@ -22,12 +24,18 @@ const ProductCard = ({ product, substringed, back }) => {
           </h6>
         </div>
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p
+          className={
+            substringed
+              ? `h-40 mb-3 font-normal text-gray-700 dark:text-gray-400`
+              : `mb-3 font-normal text-gray-700 dark:text-gray-400`
+          }
+        >
           {substringed ? description.substring(0, 100) + "..." : description}
         </p>
         {back ? (
           <Link to="/">
-            <button className="items-center px-3 py-2 text-sm w-full font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <button className="items-center px-3 mt-2 py-2 text-sm w-full font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Back
             </button>
           </Link>
