@@ -1,14 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Coming soon...</h1>
-        <p>We are building something great!</p>
-      </header>
+    <div className="min-h-screen relative">
+      <Header />
+      <div className="px-2 sm:px-4 py-2.5">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 }
