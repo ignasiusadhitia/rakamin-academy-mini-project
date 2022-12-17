@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import profilePicture from "../assets/images/profile-pic.png";
-import Loader from "../components/Loader";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false);
-  let content = null;
-
-  if (loading) {
-    content = <Loader />;
-  }
-
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "ShopApp | Contact";
