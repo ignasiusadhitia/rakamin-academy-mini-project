@@ -108,7 +108,7 @@ _This is how to run the project on your local environment._
    ```
 2. Open the repo directory
    ```sh
-   cd dts4b-17-final
+   cd rakamin-academy-mini-project
    ```
 3. Install NPM packages
    ```sh
